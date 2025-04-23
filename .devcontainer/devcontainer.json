@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "test": "dotnet build tests/McpDatalustSeq.Tests.csproj && dotnet test tests/McpDatalustSeq.Tests.csproj",
+    "build": "dotnet build src/McpDatalustSeq.csproj",
+    "launch": "dotnet run --project src/McpDatalustSeq.csproj"
+  }
+}
