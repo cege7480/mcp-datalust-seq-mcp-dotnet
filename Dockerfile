@@ -1,5 +1,5 @@
 # Use the official .NET SDK image as the base image
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # Set the working directory
 WORKDIR /app
@@ -25,7 +25,7 @@ RUN dotnet test tests/McpDatalustSeq.Tests.csproj
 RUN dotnet publish src/McpDatalustSeq.csproj -c Release -o /app/publish
 
 # Use the official ASP.NET Core runtime image as the base image for the final stage
-FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 
 # Set the working directory
 WORKDIR /app
